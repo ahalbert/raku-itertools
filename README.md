@@ -1,6 +1,6 @@
 Module
 ------
-itertools - A direct port of Python's itertools to perl6.
+python::itertools - A direct port of Python's itertools to perl6.
 
 Description
 -----------

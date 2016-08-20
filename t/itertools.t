@@ -1,6 +1,6 @@
 use v6;
 use Test;
-use itertools;
+use python::itertools;
 
 plan 21;
 
@@ -37,3 +37,5 @@ is tee(1..5 ,3), (1..5, 1..5, 1..5);
 is zip_longest("0", (1,2,3,4),(1,2), (-1,-2,-3)), ((1,1,-1), (2,2,-2), (3,"0",-3), (4, "0","0"));
 
 is combinations_with_replacement(('a','b','c'), 2), (('a','a'), ('a','b'), ('a','c'), ('b','a'), ('b','b'), ('b','c'), ('c','a'), ('c','b'), ('c','c'));
+
+done-testing;

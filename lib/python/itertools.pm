@@ -1,13 +1,13 @@
+use v6;
+my $VERSION = "0.9";
+unit module python::itertools;
+
 sub count($start is copy, $step=1) is export {
-    gather {
-        while True {
-            take $start;
-            $start += $step;
-        }
-    }
+    $start, *+$step ... *;
 }
+
 sub repeats($obj, Int $times=0) is export {
-    die "times-repeated in itertools::repeats must be > -1." unless $times >= 0;
+    die "times-repeated in repeats must be > -1." unless $times >= 0;
     gather {
         if $times == 0 {
             take $obj while True; 
