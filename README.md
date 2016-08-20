@@ -8,10 +8,8 @@ It provides all the functionality that python's itertools does, including lazy e
 In the future, I'd like to maximize the performance of these functions.
 Function signatures may be a little different. 
 
-I needed a ``itertools.combinations_with_replacement``` and couldn't find an easy
-builtin or library to do it.
-
-It turns out perl6 has most of these functions built in already. Unfortunatley, I did not realize that until after writing it. Oops. 
+I needed a ``itertools.combinations_with_replacement`` and couldn't find an easy
+builtin or library to do it. So why not write the library myself? It turns out perl6 has most of these functions built in already. Unfortunatley, I did not realize that until after writing it. Oops. 
 
 Copying
 -------
