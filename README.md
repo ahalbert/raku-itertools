@@ -18,8 +18,7 @@ Copying
 Copyright (c) 2016 Armand Halbert.  All rights reserved.
 
 This program is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself. Perl6 is distributed
-under the GNU GPL. 
+it under the terms in LICENSE. 
 
 Prerequisites
 -------------
