@@ -3,7 +3,7 @@
   "name"        : "python::itertools",
   "version"     : "1.0.0",
   "description" : "Port of python itertools",
-  "auth"        : "github:ahalbert",
+  "auth"        : "zef:ahalbert",
   "depends"     : [ ],
   "provides"    : {
     "python::itertools" : "lib/python/itertools.pm"
