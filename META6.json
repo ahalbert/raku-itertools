@@ -6,7 +6,7 @@
   "auth"        : "zef:ahalbert",
   "depends"     : [ ],
   "provides"    : {
-    "python::itertools" : "lib/python/itertools.pm"
+    "python::itertools" : "lib/python/itertools.rakumod"
   },
   "source-url"  : "git://github.com/ahalbert/raku-itertools.git"
 } 
