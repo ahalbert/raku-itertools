@@ -1,5 +1,5 @@
 use v6;
-my $VERSION = "1.0.0";
+my $VERSION = "1.0.1";
 unit module python::itertools;
 
 =begin pod 
