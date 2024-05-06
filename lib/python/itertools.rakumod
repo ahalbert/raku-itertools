@@ -1,5 +1,5 @@
 use v6;
-my $VERSION = "1.0.1";
+my $VERSION = "1.0.2";
 unit module python::itertools;
 
 =begin pod 
@@ -177,20 +177,19 @@ zip_longest((1,2,3,4),(1,2), (-1,-2,-3), :fillvalue("0")) -> ((1,1,-1), (2,2,-2)
 =end pod
 
 sub accumulate(@iterable, :$func=&[+], :$initial=Nil) is export {
-    gather {
-        my $accumulator; 
-        if $initial === Nil { 
-          $accumulator = @iterable.shift;
-        }
-        else { 
-          $accumulator = $initial 
-        }
+  my $accumulator = $initial;
+  gather {
+    for @iterable {
+      if $accumulator === Any {
+        $accumulator = $_;
+      }
+      else {
         take $accumulator;
-        for @iterable {
-            $accumulator = $func($accumulator, $_);
-            take $accumulator;
-        }
+        $accumulator = $func($accumulator, $_);
+      }
     }
+    take $accumulator;
+  }
 }
 
 sub batched(@iterable, $n) is export {

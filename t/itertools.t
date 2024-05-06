@@ -1,10 +1,12 @@
 use v6;
 use Test;
+use lib 'lib';
 use python::itertools;
 
 plan 36;
 
 is accumulate([1,2,3,4,5]),  [1, 3, 6, 10, 15];
+is accumulate((1,2,3,4,5)),  [1, 3, 6, 10, 15];
 is accumulate([1,2,3,4,5], func => &[*] ),  [1, 2, 6, 24, 120];
 is accumulate([1,2,3,4,5], initial => 100),  [100, 101, 103, 106, 110, 115];
 is accumulate([2,3,4,5], func => &[*], initial => -1 ),  [-1, -2, -6, -24, -120];
