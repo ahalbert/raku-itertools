@@ -180,7 +180,7 @@ sub accumulate(@iterable, :$func=&[+], :$initial=Nil) is export {
   my $accumulator = $initial;
   gather {
     for @iterable {
-      if $accumulator === Any {
+      if !$accumulator.defined {
         $accumulator = $_;
       }
       else {

@@ -3,7 +3,7 @@ use Test;
 use lib 'lib';
 use python::itertools;
 
-plan 36;
+plan 37;
 
 is accumulate([1,2,3,4,5]),  [1, 3, 6, 10, 15];
 is accumulate((1,2,3,4,5)),  [1, 3, 6, 10, 15];
